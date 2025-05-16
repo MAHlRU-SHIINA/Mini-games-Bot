@@ -1,0 +1,6 @@
+# requirements.txt
+# Dependencies for Discord Memory Match Game
+
+discord.py>=2.0.0  # Discord API wrapper
+python-dotenv>=0.20.0  # For loading environment variables
+aiohttp>=3.8.1  # Required by discord.py
