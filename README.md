@@ -6,6 +6,7 @@ A Discord bot that supports multiple games with a modular architecture.
 
 - **Memory Match (ID: 1001)** - Match pairs of emojis to win!
 - **Tic Tac Toe (ID: 1002)** - Classic X and O game
+- **Rock Paper Sissors (ID: 1003)** - Classis RPS and Action RPS
 
 ## Features
 
@@ -39,9 +40,13 @@ A Discord bot that supports multiple games with a modular architecture.
 │   │   ├── game_1001.py      # Game logic
 │   │   └── ui_1001.py        # UI components
 │   └── game_1002_tictactoe/  # Tic Tac Toe Game
-│       ├── commands_1002.py  # Game commands
-│       ├── game_1002.py      # Game logic
-│       └── ui_1002.py        # UI components
+│   │   ├── commands_1002.py  # Game commands
+│   │   ├── game_1002.py      # Game logic
+│   │   └── ui_1002.py        # UI components
+│   └── game_1003_rps/  # Tic Tac Toe Game
+│       ├── commands_1003.py  # Game commands
+│       ├── game_1003.py      # Game logic
+│       └── ui_1003.py        # UI components
 └── utils/                    # General utilities
     └── card.py               # Card class
 ```
@@ -59,6 +64,12 @@ A Discord bot that supports multiple games with a modular architecture.
 - `/ttt_accept` - Accept a Tic Tac Toe challenge
 - `/ttt_decline` - Decline a Tic Tac Toe challenge
 - `/ttt_end` - End a Tic Tac Toe game
+
+### RPS Game
+- `/rps @user` - Challenge a user to a Tic Tac Toe game
+- `/rps_accept` - Accept a RPS challenge
+- `/rps_decline` - Decline a RPS challenge
+- `/rps_action` - play the Rps Action with gif
 
 ### General Commands
 - `/leaderboard [scope] [game]` - Show the game leaderboard
@@ -85,3 +96,10 @@ To add a new game:
 - Python 3.8+
 - discord.py 2.0+
 - See requirements.txt for all dependencies
+
+## .env File
+
+- Add a Env file in same folder as Bot.py
+- the env file must contain
+DISCORD_BOT_TOKEN= # (your discord bot token here)
+TENOR_API_KEY= # (your Tenor api here)
